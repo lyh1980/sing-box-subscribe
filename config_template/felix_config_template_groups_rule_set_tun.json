@@ -1,5 +1,4 @@
 
-
 {
   "log": {
     "level": "info",
@@ -24,7 +23,7 @@
       {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
-        "detour": "proxy"
+        "detour": "Proxy"
       },
       {
         "tag": "localDns",
@@ -94,7 +93,7 @@
   ],
   "outbounds": [
     {
-      "tag":"proxy",
+      "tag":"Proxy",
       "type":"selector",
       "outbounds":[
         "auto",
@@ -112,7 +111,7 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -128,7 +127,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -144,7 +143,7 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -160,7 +159,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -176,7 +175,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -209,7 +208,7 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -226,7 +225,7 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -242,7 +241,7 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -258,7 +257,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -275,7 +274,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -292,7 +291,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -309,7 +308,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -325,7 +324,7 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
@@ -341,7 +340,7 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
-        "proxy",
+        "Proxy",
         "auto",
 		"HKauto",
 		"Hysteria2",
