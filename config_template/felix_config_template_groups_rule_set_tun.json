@@ -1,4 +1,5 @@
 
+
 {
   "log": {
     "level": "info",
@@ -23,7 +24,7 @@
       {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
-        "detour": "Proxy"
+        "detour": "proxy"
       },
       {
         "tag": "localDns",
@@ -93,10 +94,16 @@
   ],
   "outbounds": [
     {
-      "tag":"Proxy",
+      "tag":"proxy",
       "type":"selector",
       "outbounds":[
         "auto",
+		"HKauto",
+		"Hysteria2",
+		"TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
         "direct",
         "{all}"
       ]
@@ -105,7 +112,11 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
-        "TaiWan",
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
+		"TaiWan",
         "Singapore",
         "Japan",
         "America",
@@ -117,6 +128,10 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -129,6 +144,10 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -141,6 +160,10 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -153,6 +176,10 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -182,6 +209,10 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -195,6 +226,10 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -207,6 +242,10 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -219,6 +258,10 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -232,6 +275,10 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -245,6 +292,10 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -258,6 +309,10 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -270,6 +325,10 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -282,6 +341,10 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
+        "proxy",
+        "auto",
+		"HKauto",
+		"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -344,7 +407,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|东京|Japan"]}
       ]
     },
     {
@@ -366,6 +429,32 @@
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
       ]
+    },
+    {
+      "tag":"Hysteria2",
+      "type":"urltest",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["hysteria2"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "tag":"HKauto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"auto",
