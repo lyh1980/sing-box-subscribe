@@ -108,7 +108,7 @@
       "outbounds":[
         "homevpn",
         "homevpn1",
-		"direct",
+	"direct"
       ],
       "default": "homevpn1"
     {
