@@ -111,6 +111,7 @@
 	"direct"
       ],
       "default": "homevpn1"
+    },
     {
       "tag":"OpenAI",
       "type":"selector",
