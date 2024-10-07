@@ -108,6 +108,13 @@
       "outbounds":[
         "homevpn",
         "homevpn1",
+        "Proxy",
+        "auto",
+     	"Hysteria2",		
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
 	"direct"
       ],
       "default": "homevpn"
