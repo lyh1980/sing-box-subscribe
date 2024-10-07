@@ -516,6 +516,10 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "geoip-home",
+        "outbound": "Home"
+      },
+      {
         "rule_set": "geosite-whitelist",
         "outbound": "China"
       },	    
@@ -586,10 +590,6 @@
       {
         "rule_set": ["geoip-cn", "geosite-cn"],
         "outbound": "China"
-      },
-      {
-        "rule_set": "geoip-home",
-        "outbound": "Home"
       }
     ],
     "rule_set": [
