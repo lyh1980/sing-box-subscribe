@@ -108,7 +108,7 @@
       "outbounds":[
         "homevpn",
         "homevpn1",
-        "direct",
+		"direct",
       ],
       "default": "homevpn1"
     {
@@ -133,7 +133,7 @@
         "auto",
      	"Hysteria2",
     	"HKauto",	
-        "HongKong",
+		"HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
