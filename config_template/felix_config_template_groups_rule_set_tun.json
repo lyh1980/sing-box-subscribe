@@ -110,7 +110,7 @@
         "homevpn1",
 	"direct"
       ],
-      "default": "homevpn1"
+      "default": "homevpn"
     },
     {
       "tag":"OpenAI",
