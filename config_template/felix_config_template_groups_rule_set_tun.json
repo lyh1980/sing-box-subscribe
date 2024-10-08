@@ -414,8 +414,11 @@
     {
       "tag":"Hysteria2",
       "type":"urltest",
-      "outbounds":[
-        "{all}"
+      "outbounds": [
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria"
       ],
       "filter":[
         {"action":"include","keywords":["hysteria2"]}
@@ -463,7 +466,7 @@
       "tag": "block"
     },
     {
-      "tag": "Oracle-A_hysteria2",
+      "tag": "Oracle-A_hysteria",
       "type": "hysteria2",
       "server": "a.lyh1980.tk",
       "server_port": 443,
@@ -480,7 +483,7 @@
       }
     },
     {
-      "tag": "Oracle-B-hysteria2",
+      "tag": "Oracle-B-hysteria",
       "type": "hysteria2",
       "server": "b.lyh1980.tk",
       "server_port": 443,
@@ -497,7 +500,7 @@
       }
     },
     {
-      "tag": "Oracle-C-hysteria2",
+      "tag": "Oracle-C-hysteria",
       "type": "hysteria2",
       "server": "c.lyh1980.tk",
       "server_port": 443,
@@ -514,7 +517,7 @@
       }
     },
     {
-      "tag": "Oracle-D-hysteria2",
+      "tag": "Oracle-D-hysteria",
       "type": "hysteria2",
       "server": "d.lyh1980.tk",
       "server_port": 443,
