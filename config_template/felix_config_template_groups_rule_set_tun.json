@@ -103,23 +103,6 @@
       ]
     },
     {
-      "tag":"Home",
-      "type":"selector",
-      "outbounds":[
-        "homevpn",
-        "homevpn1",
-        "Proxy",
-        "auto",
-     	"Hysteria2",		
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-	"direct"
-      ],
-      "default": "homevpn"
-    },
-    {
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
@@ -141,7 +124,7 @@
         "auto",
      	"Hysteria2",
     	"HKauto",	
-		"HongKong",
+	"HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
@@ -478,6 +461,95 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "tag": "Oracle-A_hysteria2",
+      "type": "hysteria2",
+      "server": "a.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "a.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-B-hysteria2",
+      "type": "hysteria2",
+      "server": "b.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "b.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-C-hysteria2",
+      "type": "hysteria2",
+      "server": "c.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "c.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-D-hysteria2",
+      "type": "hysteria2",
+      "server": "d.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "d.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "homevpn1",
+      "type": "trojan",
+      "server": "lyh1980.tk",
+      "server_port": 36422,
+      "password": "e2a12087-f222-43b0-a29b-368d38099982",
+      "tls": {
+        "enabled": false,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "homevpn",
+      "type": "vmess",
+      "server": "lyh1980.tk",
+      "server_port": 36423,
+      "uuid": "e2a12087-f222-43b0-a29b-368d38099982",
+      "security": "auto",
+      "alter_id": 0,
+      "packet_encoding": "xudp"
     }
   ],
   "route": {
@@ -524,7 +596,7 @@
       },
       {
         "rule_set": "geoip-home",
-        "outbound": "Home"
+        "outbound": "homevpn"
       },
       {
         "rule_set": "geosite-whitelist",
