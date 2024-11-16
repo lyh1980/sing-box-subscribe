@@ -534,7 +534,7 @@
       }
     },
     {
-      "tag": "homevpn1",
+      "tag": "homevpn",
       "type": "trojan",
       "server": "lyh1980.tk",
       "server_port": 36422,
@@ -544,16 +544,6 @@
         "insecure": true
       }
     },
-    {
-      "tag": "homevpn",
-      "type": "vmess",
-      "server": "lyh1980.tk",
-      "server_port": 36423,
-      "uuid": "e2a12087-f222-43b0-a29b-368d38099982",
-      "security": "auto",
-      "alter_id": 0,
-      "packet_encoding": "xudp"
-    }
   ],
   "route": {
     "auto_detect_interface": true,
