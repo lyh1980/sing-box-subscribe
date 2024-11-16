@@ -888,13 +888,6 @@
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/wechat.json",
         "download_detour": "direct"
       },
-      {
-        "tag": "geoip-home",
-        "type": "remote",
-        "format": "source",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/home.json",
-        "download_detour": "direct"
-      }
     ]
   }
 }
