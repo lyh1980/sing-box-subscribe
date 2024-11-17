@@ -554,6 +554,15 @@
         "outbound": "Proxy"
       },
       {
+        "ip_cidr": [
+          "192.168.50.0/24",
+          "192.168.8.0/24",
+          "192.168.1.0/24",
+          "192.168.2.0/24"
+        ],
+        "outbound": "homevpn"
+      },
+      {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
