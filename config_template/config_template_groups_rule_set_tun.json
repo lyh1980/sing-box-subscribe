@@ -111,6 +111,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ],
       "default": "America"
     },
@@ -124,6 +125,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -136,6 +138,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -148,6 +151,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -160,6 +164,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -189,6 +194,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ],
       "default": "America"
     },
@@ -201,6 +207,7 @@
         "Singapore",
         "Japan",
         "America"
+        "Proxy"
       ],
       "default": "Japan"
     },
@@ -214,6 +221,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -226,6 +234,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -239,6 +248,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -252,6 +262,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -265,6 +276,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -277,6 +289,7 @@
         "Japan",
         "America",
         "Others"
+        "Proxy"
       ]
     },
     {
@@ -290,6 +303,7 @@
         "America",
         "Others",
         "direct"
+        "Proxy"
       ]
     },
     {
@@ -547,6 +561,19 @@
           "d.metacubex.one"
         ],
         "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          "lyh1980.tk",
+          "cdn.jsdelivr.net"
+        ],
+        "outbound": "direct"
+      },      
+      {
+        "domain_suffix": [
+          "bing.com",
+        ],
+        "outbound": "Proxy"
       },
       {
         "ip_is_private": true,
