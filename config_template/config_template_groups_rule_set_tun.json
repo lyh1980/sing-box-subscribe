@@ -110,7 +110,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ],
       "default": "America"
@@ -124,7 +124,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -137,7 +137,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -150,7 +150,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -163,7 +163,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -193,7 +193,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ],
       "default": "America"
@@ -206,7 +206,7 @@
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
         "Proxy"
       ],
       "default": "Japan"
@@ -220,7 +220,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -233,7 +233,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -247,7 +247,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -261,7 +261,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -275,7 +275,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -288,7 +288,7 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
         "Proxy"
       ]
     },
@@ -302,7 +302,7 @@
         "Japan",
         "America",
         "Others",
-        "direct"
+        "direct",
         "Proxy"
       ]
     },
@@ -571,7 +571,7 @@
       },      
       {
         "domain_suffix": [
-          "bing.com",
+          "bing.com"
         ],
         "outbound": "Proxy"
       },
