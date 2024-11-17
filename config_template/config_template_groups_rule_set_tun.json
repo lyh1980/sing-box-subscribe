@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
+      "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
@@ -77,14 +77,14 @@
       "platform": {
         "http_proxy": {
           "enabled": true,
-          "server": "0.0.0.0",
+          "server": "127.0.0.1",
           "server_port": 2080
         }
       }
     },
     {
       "type": "mixed",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2080,
       "sniff": true,
       "users": []
@@ -96,13 +96,9 @@
       "type":"selector",
       "outbounds":[
         "auto",
-	"HKauto",
-	"Hysteria2",
-	"TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
         "direct",
+        "Hysteria2",
+        "HKauto",		
         "{all}"
       ]
     },
@@ -110,11 +106,7 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
-	"TaiWan",
+        "TaiWan",
         "Singapore",
         "Japan",
         "America",
@@ -126,10 +118,6 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -142,10 +130,6 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -158,10 +142,6 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -174,10 +154,6 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -207,10 +183,6 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -224,10 +196,6 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -240,10 +208,6 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -256,10 +220,6 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -273,10 +233,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -290,10 +246,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -307,10 +259,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -323,10 +271,6 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -339,10 +283,6 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
-        "Proxy",
-        "auto",
-	"HKauto",
-	"Hysteria2",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -358,6 +298,14 @@
       "outbounds":[
         "direct",
         "Proxy"
+      ]
+    },
+    {
+      "tag":"HOME",
+      "type":"selector",
+      "outbounds":[
+        "direct",
+        "homevpn"
       ]
     },
     {
@@ -429,10 +377,26 @@
       ]
     },
     {
-      "tag":"Hysteria2",
+      "tag":"auto",
       "type":"urltest",
       "outbounds":[
         "{all}"
+      ],
+      "filter":[
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "tag":"Hysteria2",
+      "type":"urltest",
+      "outbounds": [
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria"
       ],
       "filter":[
         {"action":"include","keywords":["hysteria2"]}
@@ -455,19 +419,6 @@
       "tolerance": 50
     },
     {
-      "tag":"auto",
-      "type":"urltest",
-      "outbounds":[
-        "{all}"
-      ],
-      "filter":[
-        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
-    {
       "type": "direct",
       "tag": "direct"
     },
@@ -478,6 +429,85 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "tag": "Oracle-A_hysteria",
+      "type": "hysteria2",
+      "server": "a.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "a.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-B-hysteria",
+      "type": "hysteria2",
+      "server": "b.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "b.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-C-hysteria",
+      "type": "hysteria2",
+      "server": "c.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "c.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Oracle-D-hysteria",
+      "type": "hysteria2",
+      "server": "d.lyh1980.tk",
+      "server_port": 443,
+      "password": "Lyh-1980-1203",
+      "up_mbps": 30,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "d.lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "homevpn",
+      "type": "trojan",
+      "server": "lyh1980.tk",
+      "server_port": 36422,
+      "password": "e2a12087-f222-43b0-a29b-368d38099982",
+      "tls": {
+        "enabled": false,
+        "insecure": true
+      }
     }
   ],
   "route": {
@@ -521,6 +551,14 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-whitelist",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geoip-home",
+        "outbound": "HOME"
       },
       {
         "rule_set": "geosite-openai",
@@ -800,6 +838,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-home",
+        "type": "remote",
+        "format": "source",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/home.json",
         "download_detour": "direct"
       }
     ]
