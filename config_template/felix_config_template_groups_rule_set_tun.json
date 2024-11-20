@@ -320,6 +320,7 @@
         "direct",
         "homevpn"
       ]
+      "default": "direct"
     },
     {
       "tag":"AdBlock",
