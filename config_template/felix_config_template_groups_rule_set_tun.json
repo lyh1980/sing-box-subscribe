@@ -401,7 +401,12 @@
       "tag":"Others",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria",
+	"homevpn"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
@@ -415,8 +420,7 @@
         "Oracle-A_hysteria",
         "Oracle-B-hysteria",
         "Oracle-C-hysteria",
-        "Oracle-D-hysteria",
-        "homevpn"
+        "Oracle-D-hysteria"
       ],
       "filter":[
         {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
