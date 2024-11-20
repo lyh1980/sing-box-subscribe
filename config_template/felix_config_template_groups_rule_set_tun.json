@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
@@ -77,15 +77,15 @@
       "platform": {
         "http_proxy": {
           "enabled": true,
-          "server": "127.0.0.1",
+          "server": "0.0.0.0",
           "server_port": 2080
         }
       }
     },
     {
       "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
+      "listen": "0.0.0.0",
+      "listen_port": 2082,
       "sniff": true,
       "users": []
     }
@@ -96,9 +96,8 @@
       "type":"selector",
       "outbounds":[
         "auto",
-     	"Hysteria2",
-    	"HKauto",			  
         "direct",
+        "Hysteria2",
         "{all}"
       ]
     },
@@ -106,14 +105,12 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
-        "Proxy",
-        "auto",
-     	"Hysteria2",		
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ],
       "default": "America"
     },
@@ -121,60 +118,52 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
-	    "HongKong",
+        "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -198,15 +187,13 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ],
       "default": "America"
     },
@@ -214,14 +201,12 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
+        "Proxy"
       ],
       "default": "Japan"
     },
@@ -229,47 +214,40 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ],
-      "default": "America"
+        "Others",
+        "Proxy"
+      ]
     },
     {
       "tag":"Apple",
       "type":"selector",
       "outbounds":[
         "direct",
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -277,15 +255,13 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -293,46 +269,40 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Streaming",
-      "type":"selector",
-      "outbounds":[
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Global",
-      "type":"selector",
-      "outbounds":[ 
-        "auto",
-     	"Hysteria2",
-    	"HKauto",	
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others",
-        "direct"
+        "Proxy"
+      ]
+    },
+    {
+      "tag":"Streaming",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others",
+        "Proxy"
+      ]
+    },
+    {
+      "tag":"Global",
+      "type":"selector",
+      "outbounds":[ 
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others",
+        "direct",
+        "Proxy"
       ]
     },
     {
@@ -341,6 +311,14 @@
       "outbounds":[
         "direct",
         "Proxy"
+      ]
+    },
+    {
+      "tag":"HOME",
+      "type":"selector",
+      "outbounds":[
+        "direct",
+        "homevpn"
       ]
     },
     {
@@ -353,7 +331,7 @@
     },
     {
       "tag":"HongKong",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -363,43 +341,55 @@
     },
     {
       "tag":"TaiWan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Singapore",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Japan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|东京|Japan"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"America",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Others",
@@ -412,6 +402,24 @@
       ]
     },
     {
+      "tag":"auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria",
+        "homevpn"
+      ],
+      "filter":[
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
       "tag":"Hysteria2",
       "type":"urltest",
       "outbounds": [
@@ -422,32 +430,6 @@
       ],
       "filter":[
         {"action":"include","keywords":["hysteria2"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
-    {
-      "tag":"HKauto",
-      "type":"urltest",
-      "outbounds":[
-        "{all}"
-      ],
-      "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
-    {
-      "tag":"auto",
-      "type":"urltest",
-      "outbounds":[
-        "{all}"
-      ],
-      "filter":[
-        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -543,7 +525,7 @@
         "enabled": false,
         "insecure": true
       }
-    },
+    }
   ],
   "route": {
     "auto_detect_interface": true,
@@ -575,6 +557,15 @@
         "outbound": "Proxy"
       },
       {
+        "ip_cidr": [
+          "192.168.50.0/24",
+          "192.168.8.0/24",
+          "192.168.1.0/24",
+          "192.168.2.0/24"
+        ],
+        "outbound": "HOME"
+      },
+      {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
@@ -584,13 +575,30 @@
         "outbound": "direct"
       },
       {
+        "domain_suffix": [
+          "lyh1980.tk",
+          "cdn.jsdelivr.net"
+        ],
+        "outbound": "direct"
+      },      
+      {
+        "domain_suffix": [
+          "bing.com"
+        ],
+        "outbound": "Proxy"
+      },
+      {
         "ip_is_private": true,
         "outbound": "direct"
       },
       {
         "rule_set": "geosite-whitelist",
         "outbound": "China"
-      },	    
+      },
+      {
+        "rule_set": "geoip-home",
+        "outbound": "HOME"
+      },
       {
         "rule_set": "geosite-openai",
         "outbound": "OpenAI"
@@ -878,6 +886,13 @@
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/wechat.json",
         "download_detour": "direct"
       },
+      {
+        "tag": "geoip-home",
+        "type": "remote",
+        "format": "source",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/home.json",
+        "download_detour": "direct"
+      }
     ]
   }
 }
