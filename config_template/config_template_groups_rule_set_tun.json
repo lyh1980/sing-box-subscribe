@@ -95,11 +95,15 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
+        "HongKong",
+		"Hysteria2",
         "auto",
-        "direct",
-        "Hysteria2",
-        "HKauto",		
-        "{all}"
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others",
+        "direct"
       ]
     },
     {
@@ -321,7 +325,7 @@
         "direct",
         "homevpn"
       ],
-      "default": "homevpn"
+      "default": "direct"
     },
     {
       "tag":"AdBlock",
@@ -333,7 +337,7 @@
     },
     {
       "tag":"HongKong",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -343,49 +347,66 @@
     },
     {
       "tag":"TaiWan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Singapore",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Japan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|东京|Japan"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"America",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Others",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria",
+	"homevpn"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
@@ -395,7 +416,11 @@
       "tag":"auto",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Oracle-A_hysteria",
+        "Oracle-B-hysteria",
+        "Oracle-C-hysteria",
+        "Oracle-D-hysteria"
       ],
       "filter":[
         {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
@@ -415,19 +440,6 @@
       ],
       "filter":[
         {"action":"include","keywords":["hysteria2"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
-    {
-      "tag":"HKauto",
-      "type":"urltest",
-      "outbounds":[
-        "{all}"
-      ],
-      "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
