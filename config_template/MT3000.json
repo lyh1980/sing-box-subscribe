@@ -10,7 +10,7 @@
             "external_ui": "/etc/sing-box/ui",
             "secret": "",
             "external_ui_download_url": "https://ghp.ci/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-            "external_ui_download_detour": "🎯 全球直连",
+            "external_ui_download_detour": "direct",
             "default_mode": "rule"
         },
         "cache_file": {
@@ -27,7 +27,7 @@
             {
                 "tag": "localDns",
                 "address": "223.5.5.5",
-                "detour": "🎯 全球直连"
+                "detour": "direct"
             },
             {
                 "tag": "block",
@@ -101,7 +101,7 @@
                 "🐸 手动切换",
                 "♻️ 自动选择",
                 "Hysteria2",
-                "🎯 全球直连"
+                "direct"
             ]
         },
         {
@@ -213,14 +213,14 @@
                 "🇯🇵 日本节点",
                 "🇺🇲 美国节点",
                 "Hysteria2",
-                "🎯 全球直连"
+                "direct"
             ]
         },
         {
             "tag": "🍎 Apple",
             "type": "selector",
             "outbounds": [
-                "🎯 全球直连",
+                "direct",
                 "🚀 节点选择",
                 "♻️ 自动选择",
                 "🔯 香港自动",
@@ -354,7 +354,7 @@
             "type": "selector",
             "outbounds": [
                 "♻️ 自动选择",
-                "🎯 全球直连",
+                "direct",
                 "🇭🇰 香港节点",
                 "🇯🇵 日本节点",
                 "🇺🇲 美国节点",
@@ -362,7 +362,7 @@
             ]
         },
         {
-            "tag": "🎯 全球直连",
+            "tag": "direct",
             "type": "direct"
         },
         {
@@ -468,7 +468,7 @@
             },
             {
                 "clash_mode": "direct",
-                "outbound": "🎯 全球直连"
+                "outbound": "direct"
             },
             {
                 "clash_mode": "global",
@@ -503,11 +503,11 @@
                     "yacd.haishan.me",
                     "d.metacubex.one"
                 ],
-                "outbound": "🎯 全球直连"
+                "outbound": "direct"
             },
             {
                 "ip_is_private": true,
-                "outbound": "🎯 全球直连"
+                "outbound": "direct"
             },
             {
                 "rule_set": "geosite-openai",
@@ -562,7 +562,7 @@
                     "geoip-cn",
                     "geosite-cn"
                 ],
-                "outbound": "🎯 全球直连"
+                "outbound": "direct"
             }
         ],
         "rule_set": [
@@ -571,28 +571,28 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-youtube",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-google",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-google",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-facebook",
@@ -634,84 +634,84 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-telegram",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-telegram",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-tiktok",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-netflix",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-netflix",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-apple",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-apple",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-microsoft",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             },
             {
                 "tag": "geosite-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "direct"
             }
         ],
         "geosite": {
