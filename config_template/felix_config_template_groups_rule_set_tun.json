@@ -319,15 +319,6 @@
       ]
     },
     {
-      "tag":"HOME",
-      "type":"selector",
-      "outbounds":[
-        "direct",
-        "homevpn"
-      ],
-      "default": "direct"
-    },
-    {
       "tag":"AdBlock",
       "type":"selector",
       "outbounds":[
@@ -565,15 +556,6 @@
       {
         "clash_mode": "global",
         "outbound": "Proxy"
-      },
-      {
-        "ip_cidr": [
-          "192.168.50.0/24",
-          "192.168.8.0/24",
-          "192.168.1.0/24",
-          "192.168.2.0/24"
-        ],
-        "outbound": "HOME"
       },
       {
         "domain": [
