@@ -281,6 +281,15 @@
         "direct"
       ]
     },
+        {
+            "tag": "HOME",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "homevpn"
+            ],
+            "default": "direct"
+        },
     {
       "tag":"China",
       "type":"selector",
@@ -407,6 +416,15 @@
         "outbound": "Proxy"
       },
       {
+        "ip_cidr": [
+            "192.168.50.0/24",
+            "192.168.8.0/24",
+            "192.168.1.0/24",
+            "192.168.2.0/24"
+        ],
+        "outbound": "HOME"
+      },
+        {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
@@ -414,6 +432,18 @@
           "d.metacubex.one"
         ],
         "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+            "lyh1980.tk",
+        ],
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+            "bing.com"
+        ],
+        "outbound": "Proxy"
       },
       {
         "ip_is_private": true,
@@ -698,6 +728,14 @@
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
         "download_detour": "direct"
+       },
+       {
+        "tag": "geosite-whitelist",
+        "type": "remote",
+        "format": "source",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/wechat.json",
+        "download_detour": "direct"
+        }
       }
     ]
   }
