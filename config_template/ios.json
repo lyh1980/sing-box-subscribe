@@ -281,15 +281,15 @@
         "direct"
       ]
     },
-        {
-            "tag": "HOME",
-            "type": "selector",
-            "outbounds": [
-                "direct",
-                "homevpn"
-            ],
-            "default": "direct"
-        },
+    {
+        "tag": "HOME",
+        "type": "selector",
+        "outbounds": [
+        "direct",
+        "homevpn"
+        ],
+      "default": "direct"
+    },
     {
       "tag":"China",
       "type":"selector",
@@ -372,6 +372,152 @@
       "tolerance": 50
     },
     {
+      "tag": "oracle-b-hysteria2",
+      "type": "hysteria2",
+      "server": "b.lyh1980.tk",
+      "server_port": 51443,
+      "password": "46cd93c0-91b9-49e7-a5c2-643cbbb88b1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "b.lyh1980.tk",
+        "insecure": false
+      }
+    },
+    {
+      "tag": "oracle-a-hysteria2",
+      "type": "hysteria2",
+      "server": "a.lyh1980.tk",
+      "server_port": 51443,
+      "password": "46cd93c0-91b9-49e7-a5c2-643cbbb88b1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "a.lyh1980.tk",
+        "insecure": false
+      }
+    },
+    {
+      "tag": "oracle-c-hysteria2",
+      "type": "hysteria2",
+      "server": "c.lyh1980.tk",
+      "server_port": 51443,
+      "password": "46cd93c0-91b9-49e7-a5c2-643cbbb88b1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "c.lyh1980.tk",
+        "insecure": false
+      }
+    },
+    {
+      "tag": "oracle-d-hysteria2",
+      "type": "hysteria2",
+      "server": "d.lyh1980.tk",
+      "server_port": 51443,
+      "password": "46cd93c0-91b9-49e7-a5c2-643cbbb88b1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "d.lyh1980.tk",
+        "insecure": false
+      }
+    },
+    {
+      "tag": "homevpn",
+      "type": "trojan",
+      "server": "lyh1980.tk",
+      "server_port": 36422,
+      "password": "e2a12087-f222-43b0-a29b-368d38099982",
+      "tls": {
+        "enabled": true,
+        "server_name": "lyh1980.tk",
+        "insecure": false,
+        "alpn": [
+          "h2"
+        ]
+      }
+    },
+    {
+      "tag": "oracle-b-xhttp-220ls9si",
+      "type": "vless",
+      "server": "b.lyh1980.tk",
+      "server_port": 38628,
+      "uuid": "46cd93c0-91b9-49e7-a5c2-643cbbb88b1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "apps.apple.com",
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "p2bJX3LO9cZtL9HIAPV8-DM2BLDpVhaXXcf0QZXIHwY",
+          "short_id": "9d2e05a2e836c2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "oracle-b-reality-8klutzi3",
+      "type": "vless",
+      "server": "b.lyh1980.tk",
+      "server_port": 57711,
+      "uuid": "3574e05d-9320-4f08-97a5-b0a80cef1e8f",
+      "tls": {
+        "enabled": true,
+        "server_name": "apps.apple.com",
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "1iZtTao2aUs9Zvhb9sMm3ic_RW7Nvbq8kTN0njxvemM",
+          "short_id": "2920d8a6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "oracle-c-reality",
+      "type": "vless",
+      "server": "217.142.136.24",
+      "server_port": 443,
+      "uuid": "97ee5bb7-fb7e-4c58-ae75-b129b742c693",
+      "tls": {
+        "enabled": true,
+        "server_name": "b.6sc.co",
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "f0nDiYT6U3OCxU0gI9-7vhkDbOZ0nUFPWlrV027yA1M",
+          "short_id": "e1d6fe269b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "tag": "oracle-c-tuic",
+      "type": "tuic",
+      "server": "217.142.136.24",
+      "server_port": 443,
+      "uuid": "97ee5bb7-fb7e-4c58-ae75-b129b742c693",
+      "password": "3uQmZdHc3b",
+      "tls": {
+        "enabled": true,
+        "server_name": "b.6sc.co",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "congestion_control": "bbr"
+    },
+    {
       "type": "direct",
       "tag": "direct"
     }
@@ -424,7 +570,7 @@
         ],
         "outbound": "HOME"
       },
-        {
+      {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
@@ -435,13 +581,13 @@
       },
       {
         "domain_suffix": [
-            "lyh1980.tk",
+          "lyh1980.tk"
         ],
         "outbound": "direct"
       },
       {
         "domain_suffix": [
-            "bing.com"
+          "bing.com"
         ],
         "outbound": "Proxy"
       },
@@ -736,7 +882,6 @@
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/lyh1980/sing-box-subscribe/refs/heads/main/config_template/wechat.json",
         "download_detour": "direct"
         }
-      }
     ]
   }
 }
